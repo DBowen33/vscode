@@ -202,6 +202,7 @@ export class QuickInputController extends Disposable {
 		}));
 
 		const message = dom.append(inputContainer, $(`#${this.idPrefix}message.quick-input-message`));
+		message.setAttribute('aria-live', 'polite');
 
 		const progressBar = this._register(new ProgressBar(container, this.styles.progressBar));
 		progressBar.getContainer().classList.add('quick-input-progress');
