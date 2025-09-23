@@ -167,6 +167,7 @@ export class Dialog extends Disposable {
 		}
 
 		this.messageDetailElement = this.messageContainer.appendChild($('#monaco-dialog-message-detail.dialog-message-detail'));
+		this.messageDetailElement.setAttribute('role', 'status');
 		if (this.options.detail || !this.options.renderBody) {
 			this.messageDetailElement.innerText = this.options.detail ? this.options.detail : message;
 		} else {
