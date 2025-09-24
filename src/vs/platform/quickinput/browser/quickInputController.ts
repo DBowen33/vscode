@@ -138,6 +138,8 @@ export class QuickInputController extends Disposable {
 		}
 
 		const container = dom.append(this._container, $('.quick-input-widget.show-file-icons'));
+		container.setAttribute('role', 'dialog');
+		container.setAttribute('aria-modal', 'true');
 		container.tabIndex = -1;
 		container.style.display = 'none';
 
